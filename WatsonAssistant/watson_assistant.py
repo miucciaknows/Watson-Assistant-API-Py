@@ -21,6 +21,7 @@ logger = logging.getLogger(__name__)
 sessions = {}
 
 def create_assistant_session():
+    """This function will create a unique session_id to maintain the conversation between user and Watson Assistant."""
     try:
         session = assistant.create_session(
             assistant_id=''
@@ -34,6 +35,7 @@ def create_assistant_session():
         return jsonify({'error': 'Error white creating the session'}), 500
 
 def ask_assistant_question():
+    """This function will send your question to Watson Assistant."""
     question = request.json.get('question')
     session_id = request.json.get('sessionId')
 

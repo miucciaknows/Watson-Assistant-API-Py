@@ -31,7 +31,11 @@ I sent a question and then got an answer from WA.
 
 ### About my Code
 
-#### Debugging
+main.py: I set my routes _/ask_ and _/session_ there.
+
+watson_assistant.py: This file contains all that i need to call a 'constructor' to use WA.
+
+helpers.py: The get_response_text(result) will provide return the Watson Assistant's answer to you.
 
 #### Results
 
