@@ -35,4 +35,8 @@ I sent a question and then got an answer from WA.
 
 #### Results
 
+![](./Images/02.png)
+
+![](./Images/03.png)
+
 ### Testing on your Own
