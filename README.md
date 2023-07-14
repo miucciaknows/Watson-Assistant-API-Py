@@ -5,7 +5,7 @@ This project is the same, as my Watson Assistant v2.
 
 In this one, i'm using Python to do an API with Watson Assistant.
 
-I'm going to provide a simple briefly above.
+I'm going to provide a simple briefly below.
 
 ### My Watson Assistant
 
@@ -32,5 +32,7 @@ I sent a question and then got an answer from WA.
 ### About my Code
 
 #### Debugging
+
+#### Results
 
 ### Testing on your Own
