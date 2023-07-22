@@ -12,15 +12,25 @@ from flask import Flask, request, jsonify
 from ibm_watson import AssistantV2
 from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
 #A function that i need
-from helpers import get_response_text
+from .helpers import get_response_text
 
+#Files manipulation
+import os
 
-authenticator = IAMAuthenticator('')
+#Enviroments variables
+from dotenv import load_dotenv
+load_dotenv()
+
+api_key = os.environ["apikey"]
+url = os.environ["url"]
+assistant_id = os.environ["enviroment_id"]
+
+authenticator = IAMAuthenticator(api_key)
 assistant = AssistantV2(
     version='2023-05-25',
     authenticator=authenticator
 )
-assistant.set_service_url('')
+assistant.set_service_url(url)
 
 #Debugging
 logging.basicConfig(level=logging.DEBUG)
@@ -32,7 +42,7 @@ def create_assistant_session():
     """This function will create a unique session_id to maintain the conversation between user and Watson Assistant."""
     try:
         session = assistant.create_session(
-            assistant_id=''
+            assistant_id=assistant_id,
         ).get_result()
         session_id = session['session_id']
         sessions[session_id] = {}
@@ -58,7 +68,7 @@ def ask_assistant_question():
         }
 
         response = assistant.message(
-            assistant_id='',
+            assistant_id=assistant_id,
             session_id=session_id,
             input=message_input,
             context=sessions.get(session_id, {})
@@ -83,7 +93,7 @@ def ask_assistant_question():
             time.sleep(0.1)
             #Assistant message to user requirements
             response = assistant.message(
-                assistant_id='',
+                assistant_id=assistant_id,
                 session_id=session_id,
                 input=message_input,
                 context=sessions.get(session_id, {})

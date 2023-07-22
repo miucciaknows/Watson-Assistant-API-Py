@@ -1,6 +1,7 @@
 #Setting the requirements
 from flask import Flask, request, jsonify
-from .WatsonAssistant.watson_assistant import create_assistant_session, ask_assistant_question
+from WatsonAssistant.watson_assistant import create_assistant_session, ask_assistant_question
+from WatsonAssistant.helpers import get_response_text
 
 app = Flask(__name__)
 app.config['JSONIFY_PRETTYPRINT_REGULAR'] = False
