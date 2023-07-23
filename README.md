@@ -44,3 +44,23 @@ helpers.py: The get_response_text(result) will provide return the Watson Assista
 ![](./Images/03.png)
 
 ### Testing on your Own
+
+1. Open your terminal (On VS Code would be better)
+2. Then, type:
+`git clone https://github.com/miucciaknows/Watson-Assistant-API-Py`
+To get this project
+3. Make sure that you're in folder that the project is.
+`cd Watson-Assistant-API-Py`
+4. Get all the requirements:
+`pip3 install requirements.txt`
+
+-> Don't forget to fill your env file with your **api key, url and enviroment id.**
+
+5. `python3 main.py`
+
+I use insomnia to get and post my routes.
+
+
+http://127.0.0.1:3000/session
+
+http://127.0.0.1:3000/ask
