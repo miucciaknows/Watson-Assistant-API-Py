@@ -1,11 +1,6 @@
 # Watson Assistant API Py
 
-This project is the same, as my Watson Assistant v2.
---> [Watson Assistant v2 in node.js](https://github.com/miucciaknows/Watson-Assistant-API)
-
-In this one, i'm using Python to do an API with Watson Assistant.
-
-I'm going to provide a simple briefly below.
+This project is the same as this [one](https://github.com/miucciaknows/Watson-Assistant-API) but in python language. 
 
 ### My Watson Assistant
 
